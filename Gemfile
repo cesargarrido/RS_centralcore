@@ -13,6 +13,7 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -22,6 +23,10 @@ gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'haml-rails'
+gem 'devise', github: "heartcombo/devise"
+gem 'omniauth-facebook'
+#Flexbox rb
+gem 'flexbox_rb'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -41,12 +46,16 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end

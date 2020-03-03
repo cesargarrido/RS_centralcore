@@ -1,2 +1,11 @@
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
+%link{:href => "//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css", :rel => "stylesheet", :type => "text/css"}/
+.top-space
+  .row.center-xs
+    col-xs-8,col-md-10 do
+      .row
+        col-lg-2,col-sm-3,col-xs-10 do
+          %ul.remove-bullet-points.text-left
+            %li=link_to "Explorar","#"
+            %li=link_to "Sugerencias","#"
+        col-xs-10, class:"col-sm" do
+          =render "posts/form"
